@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_web_info">기술 노트</string>
+
+    <string name="msg_cert_error">Certificate error.</string>
+    <string name="msg_cert_trust_error">Certificate is untrusted.</string>
+    <string name="msg_cert_expired_error">Certificate has expired.</string>
+    <string name="msg_cert_mismatched_error">Certificate ID is mismatched.</string>
+    <string name="msg_cert_not_yet_error">Certificate is not yet valid.</string>
+    <string name="msg_cert_ssl_error">SSL Certificate Error</string>
+    <string name="msg_cert_continue">Do you want to continue anyway?</string>
+    <string name="msg_proceed">"보안 인증서가 발급됩니다."</string>
+
+    <string name="button_cancel">Cancel</string>
+    <string name="button_ok">OK</string>
+    <string name="button_continue">Continue</string>
+</resources>
