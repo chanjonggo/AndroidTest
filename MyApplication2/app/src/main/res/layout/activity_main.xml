@@ -6,20 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <WebView
-        android:id ="@+id/webInfo"
+     <WebView
+        android:id="@+id/webInfo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent" >
+
+         <TextView
+
+             android:layout_width="168dp"
+             android:layout_height="149dp"
+             android:layout_x="108dp"
+             android:layout_y="190dp"
+             android:text="Hello World!" />
+     </WebView>
+
+    <!--<EditText
+        android:id="@+id/phone"
+        android:layout_width="172dp"
+        android:layout_height="159dp"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="62dp" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
