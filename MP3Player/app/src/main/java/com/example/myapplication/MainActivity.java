@@ -22,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.mediaPlayer = MediaPlayer.create(this, R.raw.unavailable);
+        this.mediaPlayer = MediaPlayer.create(this, R.raw.shortmp3);
+
+        if (null == this.mediaPlayer)
+        {
+            return;
+        }
         this.mediaPlayer.start();
 
         //실제론 테스트 용도이며 더 좋은 방식의 읽기가 존재한다고 함
