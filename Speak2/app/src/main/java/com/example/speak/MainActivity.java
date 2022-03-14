@@ -53,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
                                 case 1:
                                     break;
                                 case 2:
+                                    ArrayList<String> results = intent
+                                            .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+                                    String str = results.get(0);
+                                    Toast.makeText(getBaseContext(), str, Toast.LENGTH_SHORT).show();
+
+                                    TextView tv = findViewById(R.id.txVoice);
+                                    tv.setText(str);
                                     break;
                                 default :
                                     break;
