@@ -62,13 +62,12 @@ public class MainActivity extends AppCompatActivity {
                                     TextView tv = findViewById(R.id.txVoice);
                                     tv.setText(str);
                                     break;
-                                default :
+                                default:
                                     break;
                             }
                         }
                     }
-                }
-        );
+                });
 
         FloatingActionButton floatingActionButton = findViewById(R.id.floatingActionButton);
         floatingActionButton.setOnClickListener(view -> {
