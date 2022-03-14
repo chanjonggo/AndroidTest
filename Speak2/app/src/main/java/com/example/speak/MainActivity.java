@@ -15,9 +15,17 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.speech.tts.Voice;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityResultLauncher<Intent> resultLauncher;
@@ -60,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
                     .setAction("Action", null).show();
 
             //VoiceTask
-
+            VoiceTask voiceTask = new VoiceTask();
+            voiceTask.execute();
         });
     }
 
@@ -83,22 +92,22 @@ public class MainActivity extends AppCompatActivity {
             try {
 
             } catch (Exception e) {
-                //Log.d("")
+                Log.d("onActivityResult", "getImageURL exception");
             }
         }
-
-        private void getVoice() {
-            Intent intent = new Intent();
-            intent.setAction(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-
-            String language = "ko-KR";
-
-            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, language);
-            intent.putExtra("CallType", 2);
-            resultLauncher.launch(intent);
-        }
-
     }
+
+    private void getVoice() {
+        Intent intent = new Intent();
+        intent.setAction(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+
+        String language = "ko-KR";
+
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, language);
+        intent.putExtra("CallType", 2);
+        resultLauncher.launch(intent);
+    }
+
 }
